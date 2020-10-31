@@ -10,6 +10,6 @@ tabetud = TableauEtudiant()
 tabetud.lectureTableau(u'./documents/etudiants.xlsx')
 
 for e in tabetud.listeEtudiants:
-    print e
+    print(e)
 
 #run(tabetud.listeEtudiants, tabdep.listeUniversite)

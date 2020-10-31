@@ -18,9 +18,10 @@ class Universite:
         return cmp(self.nom, nom)
 
     def __str__(self):
-        st = self.nom.encode('utf-8')
+        st = self.nom
         for p in self.listeDesProgrammes:
-            st += "| " + str(p).encode('utf-8')
+            st += '| '
+            st += str(p)
         return st
 
     def est_present(self, nom):

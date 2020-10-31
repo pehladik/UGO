@@ -17,18 +17,18 @@ class Etudiant:
 
     def __str__(self):
         st = "id: " + str(self.id)
-        st += ", nom: " + self.nom.encode('utf-8')
-        st += ", prenom: " + self.prenom.encode('utf-8')
+        st += ", nom: " + self.nom
+        st += ", prenom: " + self.prenom
         st += ", classement: " + str(self.classement)
-        st += ", filiere: " + self.filiere.encode('utf-8')
+        st += ", filiere: " + self.filiere
         if self.choix1 != None:
-            st += ", choix1: " + self.choix1.encode('utf-8')
+            st += ", choix1: " + self.choix1
         if self.choix2 != None:
-            st += ", choix 2: " + self.choix2.encode('utf-8')
+            st += ", choix 2: " + self.choix2
         if self.choix3 != None:
-            st += ", choix3: " + self.choix3.encode('utf-8')
+            st += ", choix3: " + self.choix3
         if self.choixfinal != None:
-            st += ", choix: " + self.choixfinal.encode('utf-8')
+            st += ", choix: " + self.choixfinal
         return st
 
     def est_present(self, id):

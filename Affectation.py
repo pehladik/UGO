@@ -62,7 +62,7 @@ def writeHTMLReport(listeEtudiant, listeUniversite):
                 else:
                     act =""
                 report.write("est affect&eacute;(e) en " + act  + e.filiere + " &agrave; ")
-                report.write("<a href=./univ/univ" + str(idxu) + ".html>"+ e.choixfinal.encode('utf-8') + "</a>")
+                report.write("<a href=./univ/univ" + str(idxu) + ".html>"+ e.choixfinal + "</a>")
                 report.write(" (choix " + str(e.numChoix()) + ")")
         else :
             report.write(" <strong><span style=\"color:#FF0000\"> => problem</span></strong>")
@@ -77,7 +77,7 @@ def writeHTMLReport(listeEtudiant, listeUniversite):
             univ = next(u for u in listeUniversite if u.est_present(e.choixUniv(idxexpli)))
             idxu = listeUniversite.index(univ)
             if explication == PAS_DE_PLACE:
-                report.write("<li>Pas de place a <a href=./univ/univ" + str(idxu) + ".html>"+ univ.nom.encode('utf-8') + "</a>")
+                report.write("<li>Pas de place a <a href=./univ/univ" + str(idxu) + ".html>"+ univ.nom + "</a>")
                 report.write("<ul><li>Places occupees : ")
                 separateur = ''
                 for k,v in univ.listePlaceOccuppeesParFiliere.items():
@@ -95,9 +95,9 @@ def writeHTMLReport(listeEtudiant, listeUniversite):
             elif explication == PAS_DE_PROGRAMME:
                 report.write("<li>Pas de programme pour la filiere ")
                 report.write(e.filiere)
-                report.write(" a <a href=./univ/univ" + str(idxu) + ".html>"+ univ.nom.encode('utf-8') + "</a></li>")
+                report.write(" a <a href=./univ/univ" + str(idxu) + ".html>"+ univ.nom + "</a></li>")
             elif explication == AFFECTATION:
-                report.write("<li>Affectation a <a href=./univ/univ" + str(idxu) + ".html>"+ univ.nom.encode('utf-8') + "</a></li>")
+                report.write("<li>Affectation a <a href=./univ/univ" + str(idxu) + ".html>"+ univ.nom + "</a></li>")
             idxexpli += 1
 
         report.write("</ul>")
@@ -120,7 +120,7 @@ def writeHTMLReportUniversity(listeUniversite):
         file.write("<!DOCTYPE html>\n<html>\n<meta charset=\"UTF-8\">\n")
         file.write("<head>\n<!-- En-tete du document  -->\n")
 
-        file.write("<h1>" + u.nom.encode('utf-8') + "</h1>")
+        file.write("<h1>" + u.nom + "</h1>")
         file.write("<h3>Programmes</h3>")
         for p in u.listeDesProgrammes:
             file.write("<li>" + str(p) + "</li>")
