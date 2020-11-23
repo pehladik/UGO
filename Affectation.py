@@ -249,7 +249,7 @@ def affecterProgramme(etudiant, listeUniversite):
 
     etudiant.explications = explication
     print ("** Resultat pour " + etudiant.nom + " " + etudiant.prenom + " (" + etudiant.filiere +\
-                  ", " + str(round(etudiant.classement*100,1)) + ")")
+                  ", " + str(round(etudiant.classement,1)) + ")")
     print (explication)
 
 

@@ -9,7 +9,8 @@ def remplaceFiliere(etudiant):
         print ("ATTENTION: pas de filiere pour " + etudiant.nom)
         etudiant.filiere = u'toto'
     else:
-        etudiant.filiere = dicoFilieresEuuivalente[etudiant.filiere]
+        #etudiant.filiere = dicoFilieresEuuivalente[etudiant.filiere]
+        etudiant.filiere = etudiant.filiere.replace(' ','')
 
 class TableauEtudiant:
 
